@@ -1,0 +1,396 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+  .Rectangle {
+    width: 1280px;
+    height: 700px;
+    /* padding: 330px 408.5px 309px 412.5px; */
+    background-color: #fff;
+  }
+.Rectangle-Copy {
+  width: 1349px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    /* margin: 0 0 62px; */
+    padding: 13px 24px 12px 42px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .Logo_Cloud_Access {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    height: 28px;
+    margin: 1px 882px 1px 0;
+    padding: 0.4px 0.7px 0.4px 1px;
+  }
+  .Path {
+    width: 36px;
+    height: 24.7px;
+    flex-grow: 0;
+    margin: 7px 0 10px;
+    color: #e20074;
+  }
+  .CLOUD {
+    width: 51.5px;
+    height: 10.1px;
+    flex-grow: 0;
+    color: #e20074;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .ACCESS {
+    width: 59.9px;
+    height: 10.1px;
+    flex-grow: 0;
+    color: #3e3e3e;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .Oval {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 0 0;
+    border-radius: 50%;
+    background-color: #f2f4f8;
+    position: relative;
+  }
+.Shape {
+  width: 14.4px;
+  height: 16.9px;
+  flex-grow: 0;
+  padding: 0 0px 0 0;
+  position:absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  
+}
+  .JohnSmith {
+    width: 72px;
+    height: 16px;
+    margin: 0 0 2px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #252a31;
+  }
+
+  .T-Mobile-USA {
+    width: 67px;
+    height: 11px;
+    margin: 2px 0 0 5px;
+    opacity: 0.5;
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #252a31;
+  }
+
+  .name {
+      display: flex;
+      flex-direction: column;
+  }
+
+
+  img {
+    border-radius: 50%;
+    width: 30px;
+  height: 30px;
+  margin: 0 0 0 10px;
+  object-fit: cover;
+  }
+
+  .box2{
+    display: flex;
+  }
+
+  .Rectangle_nav {
+    width: 220px;
+    height: 773px;
+    /* margin: 46px 20px 0 0; */
+    padding: 29px 0 308px;
+    box-shadow: 0 1px 4px 0 #dfe3e7;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .Your-GroupsPacks {
+    width: 121px;
+    height: 13px;
+    margin: 0 75px 10px 24px;
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #e20074;
+    font-weight: bold;
+  }
+
+  .You-dont-have-acces {
+    width: 179px;
+    height: 28px;
+    margin: 10px 17px 30px 24px;
+    opacity: 0.4;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .Line-11 {
+    width: 200px;
+    height: 1px;
+    margin: 0 10px 29px;
+    border: solid 1px #f2f4f8;
+  }
+
+  .Your-Requests {
+    width: 92px;
+    height: 13px;
+    margin: 0px 104px 7px 24px;
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #e20074;
+    font-weight: bold;
+  }
+
+  .Rectangle-Copy_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    height: 35px;
+    margin: 7px 0 0;
+    padding: 3px 10px 3px 24px;
+    background-color: #fff;
+  }
+
+  .Pending {
+    width: 49px;
+    height: 29px;
+    margin: 0 115px 0 0;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.23;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4a4a4a;
+  }
+
+  .Approved {
+    width: 56px;
+    height: 29px;
+    /* margin: 0 108px 0 0; */
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.23;
+    letter-spacing: normal;
+    text-align: left;
+    color: #cbcbcb;
+  }
+
+  .Rejected {
+    width: 52px;
+    height: 29px;
+    margin: 0 112px 0 0;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.23;
+    letter-spacing: normal;
+    text-align: left;
+    color: #cbcbcb;
+  }
+
+  .Rectangle_s .s {
+    width: 22px;
+    height: 18px;
+    /* margin: 6px 0 5px 115px; */
+    padding: 3px 7px 2px 8px;
+    border-radius: 12px;
+    background-color: #ea168b;
+  }
+  
+  span {
+    width: 7px;
+    height: 13px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+
+  .Rectangle-Copy-2 {
+    width: 22px;
+    height: 18px;
+  /* margin: 6px 0 5px 115px; */
+  padding: 0px 7px 2px 8px;
+  border-radius: 12px;
+    background-color: #cbcbcb;
+  }
+
+  .Line-11-Copy {
+    width: 200px;
+    height: 1px;
+    margin: 0 0 30px;
+    border: solid 1px #f2f4f8;
+  }
+
+  .Your-Approvals {
+    width: 101px;
+    height: 13px;
+    margin: 0px 85px 0px 25px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #e20074;
+  }
+
+  .You-dont-have-any-a {
+    width: 174px;
+    height: 29px;
+    margin: 0px 108px 0px 25px;
+    opacity: 0.4;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.42;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
+
+  .Line-11-Copy-4 {
+    width: 200px;
+    height: 1px;
+    margin: 23px 0 0;
+    border: solid 1px #f2f4f8;
+  }
+
+  .Rectangle-Copy_all_group {
+    /* display: flex; */
+    justify-content: space-between;
+    position: relative;
+    width: 220px;
+    height: 40px;
+    margin: 1px 0 0;
+    padding: 13px 97px 12px 24px;
+    background-color: #e20074;
+  }
+
+  .Rectangle-Copy_all_group .Shape {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    flex-grow: 0;
+    margin: 1px 88px 0 25px;
+    background-image: linear-gradient(to top, #ff9990, #fd5879);
+  
+  }
+
+  .ALL-GROUPS {
+    width: 74px;
+    height: 13px;
+    margin: 1px 0 1px 10px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #fff;
+  }
+  .Rectangle-Copy_packs {
+    /* position: relative;
+    width: 220px;
+    height: 40px; */
+    /* margin: 40px 0 0; */
+    /* padding: 13px 107px 12px 24px;
+    background-color: #fff; */
+    justify-content: space-between;
+    position: relative;
+    width: 220px;
+    height: 40px;
+    margin: 1px 0 0;
+    padding: 13px 97px 12px 24px;
+  }
+  .ALL-PACKS {
+    width: 64px;
+    height: 13px;
+    margin: 10px 0 1px 10px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #46475c;
+  }
+
+  
+  .Rectangle-Copy_packs .Shape{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    flex-grow: 0;
+    margin: 1px 88px 0 25px;
+  }
+
+
