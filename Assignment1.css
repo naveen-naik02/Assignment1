@@ -105,53 +105,55 @@ body {
 
 .nav-container {
   width: 16.5%;
-  padding-top: 1.25rem;
   box-shadow: 0 0.0625rem 0.25rem 0 #dfe3e7;
   background-color: #fff;
   z-index: 1;
 }
 
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 0.625rem  0.25rem 1.5rem;
+  height: 23.75rem;
+}
+
 .Your-GroupsPacks {
-    font-size: 0.7rem;
+    font-size: 0.8125rem;
     font-weight: bold;
     letter-spacing: 0.03125rem;
     color: #e20074;
-    padding-left: 1.5rem;
   }
 
   .You-dont-have-acces {
     opacity: 0.4;
-    font-size: 0.7rem;
+    font-size:  0.75rem;
     text-align: left;
     color: #000;
     font-weight: bold;
-    padding: 0.625rem 1.0625rem 1.875rem 1.5rem;
   }
 
   .Line-11 {
-    width: 90%;
-    margin: auto;
+    width: 100%;
     border: solid 0.0625rem #f2f4f8;
   }
 
   .Your-Requests {
-    font-size: 0.7rem;
+    font-size: 0.8125rem;
     font-weight: bold;
     letter-spacing: 0.03125rem;
     text-align: left;
     color: #e20074;
-    padding: 1.6875rem 6.5rem 0.625rem 1.5rem;
   }
 
   .Rectangle-Copy_nav {
     display: flex;
     justify-content: space-between;
-    padding: 0.1875rem 0.625rem 0.1875rem 1.5rem;
     background-color: #fff;
   }
 
   .Pending {
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     font-weight: bold;
     line-height: 2.23rem;
     text-align: left;
@@ -160,7 +162,7 @@ body {
 
   .Approved {
     width: 3.5rem;
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     font-weight: bold;
     line-height: 2.23rem;
     text-align: left;
@@ -208,34 +210,28 @@ body {
  
 
   .Line-11-Copy {
-    width: 90%;
-    margin: auto;
+    width: 100%;
     border: solid 0.0625rem #f2f4f8;
-    margin-top: .625rem;
   }
 
   .Your-Approvals {
-    font-size: 0.7rem;
+    font-size: 0.8125rem;
     font-weight: bold;
     letter-spacing: 0.03125rem;
     text-align: left;
     color: #e20074;
-    padding: 1.25rem 5.9375rem 0 1.5rem;
   }
 
   .You-dont-have-any-a {
     opacity: 0.4;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-align: left;
     color: #000;
-    padding: 0.6875rem 1.375rem  1.4375rem 1.5rem;
   }
 
   .Line-11-Copy-4 {
-    width: 90%;
-    margin: auto;
+    width: 100%;
     border: solid 0.0625rem #f2f4f8;
-    margin-bottom: 0.25rem;
   }
   ::-webkit-scrollbar {
     width: 0.3125rem;
@@ -272,12 +268,12 @@ body {
   }
 
   .ALL-GROUPS {
-    
     font-size: 0.7em;
     font-weight: bold;
     letter-spacing: 0.03125rem;
     text-align: left;
     padding-left: 0.625rem;
+    color: #46475c
   }
   
 
@@ -394,6 +390,7 @@ body {
   border-radius: 0.3125rem;
   box-shadow: 0 0.0625rem 0.3125rem 0 rgb(126 142 177 / 30%);
   background-color: #fff;
+  height: 25rem;
  } 
 
  .search-container {
@@ -591,8 +588,8 @@ height: 2.5rem;
   display: flex;
   justify-content: flex-end;
   height: 1.25rem;
-  padding: 0px .75rem 0px 0.1875rem;
-  margin: 0.625rem 0 0.625rem 0px;
+  padding: 1.25rem .75rem 0px 0.1875rem;
+  /* margin: 0.625rem 0 0.625rem 0px; */
 
 
 }
@@ -658,18 +655,30 @@ height: 2.5rem;
 
 .group-body{
   overflow-y: scroll;
-  height: 16.125rem;
+  height: 15.125rem;
+}
+
+@media only screen and (min-width:1790px){
+  body {
+    background-color: lightpink;
+  }
 }
 
 @media only screen and (min-width:2400px){
   html{
     font-size: 22px;
   }
+  body {
+    background-color: lightpink;
+  }
 } 
 
 @media only screen and (min-width:2800px){
   html{
     font-size: 28px;
+  }
+  body {
+    background-color: lightpink;
   }
 } 
 
@@ -683,7 +692,7 @@ height: 2.5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 5.625rem;
+    width: 4.5rem;
   }
   .group-name {
     white-space: nowrap;
@@ -695,6 +704,9 @@ height: 2.5rem;
     overflow-y: hidden;
     height: 25.125rem;
   }
+  .Group_details{
+    height: 35rem;
+  }
 }
 
 @media only screen and (max-width:650px){
@@ -703,7 +715,6 @@ height: 2.5rem;
   }
   .content-section {
     width: 100vw;
-    overflow-y: scroll;
   }
   .Rectangle-Copy-4 {
    padding-right: 0;
@@ -723,7 +734,8 @@ height: 2.5rem;
     width: 140px;
   }
   .Group_details {
-    width: 89.5vw;
+    width: 85vw;
+    height: 30rem;
   }
   .search-container {
     flex-direction: column;
@@ -765,21 +777,19 @@ height: 2.5rem;
     margin-bottom: 0.5rem;
   }
 
-  .main-coontainer {
-    overflow-y: scroll;
-  }
   .Groups-container {
     height: 136px;
     overflow-y: scroll;
     flex-direction: column;
     overflow-x: hidden;
+    width: 85vw;
   }
   .Group-34 {
     display: flex;
     justify-content: center;
   }
   #search-field {
-    width: 16rem;
+    width: 18rem;
   }
   .All-Groups{
     margin: 0;
