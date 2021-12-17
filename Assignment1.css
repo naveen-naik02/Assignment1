@@ -821,6 +821,7 @@ grid-template-columns: 1.9fr 1fr 1.5fr 1fr;
   }
   .group-body {
     height: 16rem;
+    margin-bottom: 5px;
   }
   .Rectangle-Copy-19 {
     display: none;
