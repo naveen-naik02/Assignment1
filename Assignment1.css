@@ -690,7 +690,7 @@ height: 2.5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width:  4.0625rem;
+    width:  4rem;
   }
   .group-body {
     overflow-y: hidden;
