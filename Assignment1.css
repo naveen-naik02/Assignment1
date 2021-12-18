@@ -390,7 +390,6 @@ body {
   border-radius: 0.3125rem;
   box-shadow: 0 0.0625rem 0.3125rem 0 rgb(126 142 177 / 30%);
   background-color: #fff;
-  height: 25rem;
  } 
 
  .search-container {
@@ -492,6 +491,7 @@ height: 2.5rem;
   color: #000;
   display: flex;
   align-items: center;
+  padding-left: 0.4375rem;
 }
 
 
@@ -566,6 +566,7 @@ height: 2.5rem;
     color: #4a4a4a;
     text-align: left;
     text-decoration: underline;
+    padding-left: 0.25rem;
 }
 
 .table-c4 {
@@ -704,9 +705,7 @@ height: 2.5rem;
     overflow-y: hidden;
     height: 25.125rem;
   }
-  .Group_details{
-    height: 35rem;
-  }
+
 }
 
 @media only screen and (max-width:650px){
@@ -714,16 +713,17 @@ height: 2.5rem;
     display: none;
   }
   .content-section {
-    width: 100vw;
+    width: 100%;
+    padding: 0;
   }
   .Rectangle-Copy-4 {
-   padding-right: 0;
+   padding: 0;
   }
   .arrrow-container {
     display: none;
   }
   .Groups {
-    width: 90vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
   }
@@ -734,16 +734,20 @@ height: 2.5rem;
     width: 140px;
   }
   .Group_details {
-    width: 85vw;
-    height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: scroll;
   }
   .search-container {
+    width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 0.3125rem;
+    margin-bottom: 0.5rem;
   }
   .wrap {
-    width: 76.5vw;
+    width: 100%;
   }
   .g-owner {
     display: none;
@@ -753,6 +757,7 @@ height: 2.5rem;
   }
   .group-names {
     grid-template-columns: 2fr 1fr;
+    width: 100%;
   }
   .table-c2 {
     display: none;
@@ -772,34 +777,48 @@ height: 2.5rem;
   .find-new {
     display: flex;
     flex-direction: column;
-    gap: 0.3125rem;
-    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: start;
     margin-bottom: 0.5rem;
+    width: 100%;
   }
 
   .Groups-container {
-    height: 136px;
+    height: 8.5rem;
     overflow-y: scroll;
     flex-direction: column;
     overflow-x: hidden;
-    width: 85vw;
+    width: 100%;
   }
   .Group-34 {
     display: flex;
     justify-content: center;
   }
   #search-field {
-    width: 18rem;
+    width: 100%;
   }
   .All-Groups{
     margin: 0;
+    padding: 0.3125rem 0  0.1875rem  0.1875rem;
   }
   .group-body {
-    height: 16rem;
-    margin-bottom: 5px;
+    height: 20rem;
     overflow-y: scroll;
   }
   .Rectangle-Copy-19 {
     display: none;
+  }
+  .header-text{
+    padding-top: 0.625rem;
+  }
+  .New-group {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width:1510px){
+  .group-body{
+    height: 19.125rem;
   }
 }
