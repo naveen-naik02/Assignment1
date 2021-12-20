@@ -678,6 +678,16 @@ height: 2.5rem;
   }
 } 
 
+@media only screen and (min-width:3100px){
+  html{
+    font-size: 32px;
+  }
+  body {
+    background-color: lightpink;
+  }
+} 
+
+
 
 
 @media only screen and (max-width:1140px ){ 
