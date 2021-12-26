@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment1</title>
+    <title>Document</title>
     <link rel="stylesheet" href="Assignment1.css">
     
 </head>
 <body>
-    <section class="main">
-        <header class="header-main">
+    <section id="main">
+        <header id="header-main">
             <div class="Logo_Cloud_Access">
-                <img class="Path" src="./images/cloud.png">
+                <button id="openbtn" onclick="openNav('open')">☰</button>
+                <img id="Path" src="./images/cloud.png">
                 <div class="CLOUD">CLOUD</div>
                 <div class="ACCESS">ACCESS</div>
             </div>
@@ -29,10 +30,12 @@
                 </div>
             </div>
         </header>
+        <div id="overlay"></div>
         <main class="main-coontainer">
-            
-            <nav class="nav-container">
+            <!-- <div id="nav-wrapper"> -->
+            <nav id="nav-container">
                 <section class="nav-section">
+                    <p id="cls-icn" onclick="openNav('close')">x</p>
                     <p class="Your-GroupsPacks">YOUR GROUPS/PACKS</p>
                     <p class="You-dont-have-acces">You dont have access to 
                         <br>anything yet</p>
@@ -66,6 +69,7 @@
                     <div class="ALL-GROUPS">ALL  PACKS</div>
                 </div>   
             </nav>
+            <!-- </div> -->
             <section class="content-section">
                 <div class="Rectangle-Copy-4">
                     <h5 class="header-text">ALL GROUPS:</h5>
@@ -74,11 +78,11 @@
                 <div class="recc_container">
                     <h5 class="recc-text">RECOMMENDED GROUPS</h5>
                     <div class="arrrow-container">
-                        <img src="./images/Arrow_back.png" alt="" class="Rectangle-Copy-17">
-                        <img src="./images/Arrow_forward.png" alt="" class="Rectangle-Copy-17">
+                        <img src="./images/Arrow_back.png" alt="" class="Rectangle-Copy-17" onclick="slide('left')">
+                        <img src="./images/Arrow_forward.png" alt="" class="Rectangle-Copy-17" onclick="slide('right')">
                     </div>
                 </div>
-                <section class="Groups-container">
+                <section id="Groups-container">
                     <div class="Groups">
                         <img src="./images/Group_icon.png" alt="" class="Group-icon">
                         <div>
@@ -122,7 +126,23 @@
                     <div class="Groups">
                         <img src="./images/Group_icon.png" alt="" class="Group-icon">
                         <div>
-                        <h5 class="ABC-Security-Groups">1HRCare Talent Scout</h5>
+                        <h5 class="ABC-Security-Groups">Paris specialites</h5>
+                        <h6 class="John-Smith-Lisando">John Smith, Lisandro Matos</h6>
+                        </div>
+                        <img src="./images/+Add_pack Copy.png" alt="" class="Add-icon">
+                    </div>
+                    <div class="Groups">
+                        <img src="./images/Group_icon.png" alt="" class="Group-icon">
+                        <div>
+                        <h5 class="ABC-Security-Groups">Magazzini Alimentari Riuniti</h5>
+                        <h6 class="John-Smith-Lisando">John Smith, Lisandro Matos</h6>
+                        </div>
+                        <img src="./images/+Add_pack Copy.png" alt="" class="Add-icon">
+                    </div>
+                    <div class="Groups">
+                        <img src="./images/Group_icon.png" alt="" class="Group-icon">
+                        <div>
+                        <h5 class="ABC-Security-Groups">Laughing Bacchus Winecellars</h5>
                         <h6 class="John-Smith-Lisando">John Smith, Lisandro Matos</h6>
                         </div>
                         <img src="./images/+Add_pack Copy.png" alt="" class="Add-icon">
@@ -138,15 +158,7 @@
                     <div class="Groups">
                         <img src="./images/Group_icon.png" alt="" class="Group-icon">
                         <div>
-                        <h5 class="ABC-Security-Groups">1HRCare Talent Scout</h5>
-                        <h6 class="John-Smith-Lisando">John Smith, Lisandro Matos</h6>
-                        </div>
-                        <img src="./images/+Add_pack Copy.png" alt="" class="Add-icon">
-                    </div>
-                    <div class="Groups">
-                        <img src="./images/Group_icon.png" alt="" class="Group-icon">
-                        <div>
-                        <h5 class="ABC-Security-Groups">1HRCare Talent Scout</h5>
+                        <h5 class="ABC-Security-Groups">Paris specialites</h5>
                         <h6 class="John-Smith-Lisando">John Smith, Lisandro Matos</h6>
                         </div>
                         <img src="./images/+Add_pack Copy.png" alt="" class="Add-icon">
@@ -157,7 +169,7 @@
                     <div class="search-container">
                         <h5 class="All-Groups">ALL GROUPS</h5>
                         <div class="find-new">
-                          <input type="text" placeholder="Find a Group" name="search-field" id="search-field">
+                          <input type="text" placeholder="Find a Group" name="search-field" id="search-field" onkeyup="debounceForData()">
                           <button class="New-group">+ New Group</button>
                         </div>
                     </div>
@@ -165,10 +177,11 @@
                     <div class="group-names">
                         <div class="t-header">
                           <input type="checkbox" id="check-box-1" name="check-box">
-                          <h5 class="g-name">GROUP NAME</h5>
+                          <h5 id="g-name">GROUP NAME</h5>
+                          <img src="./images/Sorting.png" alt="" id="Sorting" onclick="group_name_sort()">
                         </div>
-                          <h5 class="g-owner">GROUP OWNER</h5>
-                          <h5 class="g-on">CREATED ON</h5>
+                          <h5 id="g-owner">GROUP OWNER <img src="./images/Sorting.png" alt="" onclick="group_owner_sort()" id="g-sort"></h5>
+                          <h5 class="g-on">CREATED ON <img src="./images/Sorting.png" alt="" onclick="group_date_sort()" id="date-sort"></h5>
                           <h5 class="g-a">ACTIONS</h5>
                     </div>
                     <div class="group-body">
@@ -177,14 +190,14 @@
                                 <input type="checkbox" name="check-box" id="check-box">
                                 <div class="t-name">
                                   <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                  <p class="group-name">1HRCare Talent Scout Sr.Managers</p>
+                                  <p id="1" class="group-name">1HRCare Talent Scout Sr.Managers</p>
                                 </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">John Smith</p>
+                                <p id="11" class="group-own">John Smith</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="21" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -194,14 +207,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">ABC Security Groups</p>
+                                <p id="2" class="group-name">ABC Security Groups</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">John Smith</p>
+                                <p id="12" class="group-own">John Smith</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="22" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -211,14 +224,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">ATeam</p>
+                                <p id="3" class="group-name">ATeam</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">Uche Ogbonna</p>
+                                <p id="13" class="group-own">Uche Ogbonna</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="23" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -228,14 +241,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">Ar Orange Crush</p>
+                                <p id="4" class="group-name">Ar Orange Crush</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">Siri Jakobsson</p>
+                                <p id="14" class="group-own">Siri Jakobsson</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="24" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -245,14 +258,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">AppRas</p>
+                                <p id="5" class="group-name">AppRas</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">Sebastian Bennett</p>
+                                <p id="15" class="group-own">Sebastian Bennett</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="25" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -262,14 +275,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">Br HRCare Talent Scout Sr.Managers</p>
+                                <p id="6" class="group-name">Br HRCare Talent Scout Sr.Managers</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">Saami Al Samad</p>
+                                <p id="16" class="group-own">Saami Al Samad</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="26" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -279,14 +292,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">CBE Security groups</p>
+                                <p id="7" class="group-name">CBE Security groups</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">Phạm Quốc Hùng</p>
+                                <p id="17" class="group-own">Phạm Quốc Hùng</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="27" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -296,14 +309,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">D HRTeam</p>
+                                <p id="8" class="group-name">D HRTeam</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">María Paula</p>
+                                <p id="18" class="group-own">María Paula</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="28" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -313,14 +326,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">Orange Crush</p>
+                                <p id="9" class="group-name">Orange Crush</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">Lisandro Matos</p>
+                                <p id="19" class="group-own">Lisandro Matos</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="29" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -330,14 +343,14 @@
                               <input type="checkbox" name="check-box" id="check-box">
                               <div class="t-name">
                                 <img src="./images/Group_icon.png" alt="" class="g-icon">
-                                <p class="group-name">RasApp</p>
+                                <p id="10" class="group-name">RasApp</p>
                               </div>
                             </div>
                             <div class="table-c2">
                                 <img src="./images/Multiple.png" alt="" class="profile-c2">
-                                <p class="group-own">Klavdia Dedova</p>
+                                <p id="20" class="group-own">Klavdia Dedova</p>
                             </div>
-                            <div class="table-c3"><div class="Name">08/13/2021</div></div>
+                            <div class="table-c3"><div id="30" class="Name">08/13/2021</div></div>
                             <div class="table-c4">
                                 <button class="button">+Join</button>
                             </div>
@@ -361,5 +374,6 @@
 
         </main>
     </section>
+    <script src="test.js"></script>
 </body>
 </html>
