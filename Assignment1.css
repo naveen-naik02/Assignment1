@@ -13,14 +13,14 @@ body {
   font-family: "Roboto";
 }
 
-.main {
+#main {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-.header-main{
+#header-main{
   height: 3.4375rem;
   padding: 0.8125rem 0.9375rem 0.75rem 1.5rem;
   box-shadow: 0 1px 0.25rem 0 rgba(0, 0, 0, 0.1);
@@ -37,10 +37,20 @@ body {
   align-items: center;
 }
 
+#openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: #111;
+  padding: 10px 15px;
+  border: none;
+  display: none;
+}
+
 .Logo_Cloud_Access:hover{
   cursor: pointer;
 }
-.Path {
+#Path {
   width: 2.25rem;
   height: 1.54375rem;
   flex-grow: 0;
@@ -112,11 +122,19 @@ cursor: pointer;
 
 
 
-.nav-container {
+#nav-container {
   width: 16.5%;
   box-shadow: 0 0.0625rem 0.25rem 0 #dfe3e7;
   background-color: #fff;
   z-index: 1;
+  transition : all 500ms ease 0s;
+}
+
+#closebtn {
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  top: 0;
 }
 
 .nav-section {
@@ -253,7 +271,7 @@ cursor: pointer;
     border-radius: 0.625rem;
   }
 
-  .Groups-container::-webkit-scrollbar { display: none;}
+  #Groups-container::-webkit-scrollbar { display: none;}
   
 
   .Rectangle-Copy_all_group {
@@ -345,7 +363,7 @@ cursor: pointer;
     cursor: pointer;
   }
 
-  .Groups-container {
+  #Groups-container {
     display: flex;
     gap: 0.5rem;
     overflow-x: scroll;
@@ -477,7 +495,7 @@ height: 2.5rem;
   background-color: #fff; 
     
 }
-.g-name {
+#g-name {
   font-family: "Roboto";
   font-size: 0.7rem;
   font-weight: bold;
@@ -486,11 +504,11 @@ height: 2.5rem;
   color: #000;
 }
 
-.g-name:hover {
+#g-name:hover {
   cursor: pointer;
 }
 
-.g-owner {
+#g-owner {
   box-shadow: 0 -1px 0 0 #dfe3e7, inset 0 -1px 0 0 #dee3e6;
   background-color: #f8fafb;
   font-size: 0.7rem;
@@ -502,7 +520,7 @@ height: 2.5rem;
   align-items: center;
 }
 
-.g-owner:hover{
+#g-owner:hover{
   cursor: pointer;
 }
 
@@ -733,6 +751,54 @@ height: 2.5rem;
   height: 15.125rem;
 }
 
+/* #nav-wrapper {
+  display: none;
+} */
+
+#cls-icn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+/* .cls-wrap {
+  display: none;
+} */
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.nav-style {
+  display: block;
+  width: 70%;
+  height: 100%;
+  position:fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+#g-sort {
+  margin-left: 15px;
+}
+
+#date-sort{
+  margin-left: 15px;
+}
+
 @media only screen and (min-width:1790px){
   body {
     background-color: lightpink;
@@ -775,7 +841,7 @@ height: 2.5rem;
     font-size: 18px;
   }
   .arrrow-container{
-    display: none;
+    display: block;
   }
   .group-own {
     white-space: nowrap;
@@ -816,30 +882,68 @@ height: 2.5rem;
 
 
 @media only screen and (max-width:650px){
+  /* .cls-wrap {
+    display: block;
+     display: flex;
+    justify-content: end;
+  }  */
+  .nav-section {
+    padding-top: 40px;
+  }
+  
+ .cls-icn{
+   width: 25px;
+   display: block;
+   color: black;
+   font-size: 1.5rem;
+   position: fixed;
+   top: 0;
+   right: 30%;
+   /* text-align: right; */
+   /* padding-bottom: 2rem; */
+ }
+
   html{
     font-size: 18px;
   }
 
-  .nav-container {
+  /* #nav-wrapper {
     display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transition: 0.5s;
+  } */
+
+  #nav-container {
+    /* display: none; */
+    overflow-x: hidden;
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    transition : all 500ms ease 0s;
+    
   }
   .content-section {
     width: 100%;
     padding: 0;
     overflow-y:auto;
+    padding: 0 20px 0 20px;
   }
   .Rectangle-Copy-4 {
-    padding: 1.25rem;
-    padding-bottom: 1rem;
+    /* padding: 1.25rem;
+    padding-bottom: 1rem; */
+    padding-top: 1.25rem;
   }
-  .recc_container {
-    padding: 1rem 1rem 1rem 1.25rem;
-  }
-  .arrrow-container {
+  
+  /* .arrrow-container {
     display: none;
-  }
+  } */
   .Groups {
-    width: 100%;
+    min-width: 100%;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -866,7 +970,7 @@ height: 2.5rem;
   .wrap {
     width: 100%;
   }
-  .g-owner {
+  #g-owner {
     display: none;
   }
   .g-on{
@@ -901,13 +1005,11 @@ height: 2.5rem;
     width: 100%;
   }
 
-  .Groups-container {
-    height: 14.5rem;
-    overflow-y: scroll;
-    flex-direction: column;
-    overflow-x: hidden;
+  #Groups-container {
+    height: 3.2rem;
+    width: 20rem;
+    overflow-x: scroll;
     width: 100%;
-    padding: 0 1.25rem;
   }
   .Group-34 {
     display: flex;
@@ -931,12 +1033,21 @@ height: 2.5rem;
   .main-coontainer{
     overflow-x: hidden;
   }
-  .header-main {
+  #header-main {
     padding: 0;
     align-items: center;
   }
   .profile {
     height: 1.875rem;
+  }
+  #openbtn {
+    display: block;
+  }
+  .CLOUD {
+    display: none;
+  }
+  .ACCESS{
+    display: none;
   }
 }
 
