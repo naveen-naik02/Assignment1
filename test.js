@@ -41,7 +41,7 @@ const debounceForData = debounce(myFunction, 300);
 function slide(direction){
     var container = document.getElementById('Groups-container');
     let scrollCompleted = 0;
-    var pix = container.scrollWidth + 15;
+    var pix = container.scrollWidth + 10;
     var no_card=document.querySelectorAll('.Groups').length;
     var inc = pix/no_card ;
     var slideVar = setInterval(function(){
