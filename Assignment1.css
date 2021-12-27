@@ -164,9 +164,6 @@ cursor: pointer;
     font-weight: bold;
   }
 
-  .You-dont-have-acces:hover {
-    cursor: pointer;
-  }
 
   .Line-11 {
     width: 100%;
@@ -249,9 +246,6 @@ cursor: pointer;
     color: #000;
   }
 
-  .You-dont-have-any-a:hover{
-    cursor: pointer;
-  }
 
   .Line-11-Copy-4 {
     width: 100%;
@@ -347,9 +341,6 @@ cursor: pointer;
     color: #676767;
   }
 
-  .recc-text:hover{
-    cursor: pointer;
-  }
 
   .Rectangle-Copy-17 {
     width: 1.125rem;
@@ -947,7 +938,9 @@ height: 2.5rem;
     height: auto;
     display: flex;
     justify-content: space-around;
-    padding: 0.7rem 0.3125rem;
+    /* padding: 0.7rem 0.3125rem; */
+    padding: 0;
+    gap: 0;
   }
   .ABC-Security-Groups {
     width: 8.75rem;
